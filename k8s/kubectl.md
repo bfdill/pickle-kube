@@ -32,13 +32,3 @@ kubectl get services
 # details of the deployments that are, uh, deployed
 kubectl describe deployments
 ```
-
-## kube dashboard
-
-In order to [access](https://github.com/kubernetes/dashboard/wiki/Accessing-Dashboard---1.7.X-and-above) the dashboard, you'll need to send a [bearer token](https://kubernetes.io/docs/admin/authentication/#putting-a-bearer-token-in-a-request)
-
-```bash
-
-# get the token needed for bearer authentication
-kubectl get secret $(kubectl get serviceaccount dashboard -o jsonpath="{.secrets[0].name}") -o jsonpath="{.data.token}" | base64 --decode
-```
