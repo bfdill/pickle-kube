@@ -172,5 +172,7 @@ tags
 !.vscode/extensions.json
 .history
 
+.DS_Store
+
 
 # End of https://www.gitignore.io/api/vim,node,kotlin,ansible,intellij,visualstudiocode
